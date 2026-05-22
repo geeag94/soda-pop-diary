@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+/* ─── PASTEL THEME ─── */
+
+:root {
+  --pixel-font: 'Press Start 2P', 'Pretendard', monospace;
+  --pastel-bg: #FFF0F5;
+  --pastel-paper: #FFFFFF;
+  --pastel-ink: #6B7280;
+  --pastel-accent: #FFB7C5;
+  --pastel-green: #B5EAD7;
+  --pastel-yellow: #FFDAC1;
+  --pastel-blue: #C7CEEA;
+  --pastel-pink: #FFB7C5;
+  --pastel-border: #E5E7EB;
+  --pastel-lavender: #E2D5F8;
+}
+
+body {
+  margin: 0;
+  color: var(--pastel-ink);
+  font-family: var(--pixel-font);
+  font-size: 12px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--pastel-bg);
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* 픽셀 테두리 유틸리티 */
+.pixel-border {
+  border: 3px solid var(--pastel-border);
+  box-shadow: 
+    3px 3px 0px var(--pastel-border),
+    inset -1px -1px 0px rgba(0,0,0,0.05);
+}
+
+.pixel-border-thin {
+  border: 2px solid var(--pastel-border);
+  box-shadow: 2px 2px 0px var(--pastel-border);
+}
+
+/* 픽셀 버튼 */
+.pixel-btn {
+  background-color: var(--pastel-yellow);
+  border: 3px solid var(--pastel-border);
+  box-shadow: 3px 3px 0px var(--pastel-border);
+  color: var(--pastel-ink);
+  font-family: var(--pixel-font);
+  font-size: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: none;
+  position: relative;
+  z-index: 10;
+}
+
+.pixel-btn:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px 0px var(--pastel-border);
+}
+
+.pixel-btn:hover {
+  filter: brightness(1.05);
+}
+
+/* 픽셀 입력 */
+.pixel-input {
+  background: white;
+  border: 3px solid var(--pastel-border);
+  box-shadow: inset 2px 2px 0px rgba(0,0,0,0.05);
+  font-family: var(--pixel-font);
+  font-size: 10px;
+  color: var(--pastel-ink);
+}
+
+.pixel-input:focus {
+  outline: none;
+  border-color: var(--pastel-accent);
+}
+
+/* 픽셀 카드 */
+.pixel-card {
+  background: var(--pastel-paper);
+  border: 3px solid var(--pastel-border);
+  box-shadow: 4px 4px 0px var(--pastel-border);
+}
+
+/* 노트 배경 패턴 - 파스텔 스타일 */
+.note-pattern-line {
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 23px,
+    #E5E7EB 23px,
+    #E5E7EB 24px
+  );
+  background-color: #FAFAFA;
+}
+
+.note-pattern-dot {
+  background-image: radial-gradient(circle, #E5E7EB 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
+  background-color: #FAFAFA;
+}
+
+.note-pattern-grid {
+  background-image: 
+    linear-gradient(#E5E7EB 1px, transparent 1px),
+    linear-gradient(90deg, #E5E7EB 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-color: #FAFAFA;
+}
+
+.note-pattern-blank {
+  background-color: #FAFAFA;
+}
+
+/* 스티커 그림자 - 파스텔 느낌 */
+.sticker-shadow {
+  filter: drop-shadow(3px 3px 0px rgba(0,0,0,0.1));
+}
+
+/* 파스텔 다이어리 커버 */
+.diary-cover {
+  position: relative;
+  background: linear-gradient(180deg, #E2D5F8 0%, #D4C4E0 100%);
+  border: 5px solid #C5B9D6;
+  box-shadow: 
+    6px 6px 0px rgba(0,0,0,0.1),
+    inset 0 0 20px rgba(0,0,0,0.05);
+}
+
+/* 다이어리 페이지 */
+.diary-page {
+  box-shadow: 
+    inset -2px 0 0px rgba(0,0,0,0.05),
+    3px 0 0px rgba(0,0,0,0.05);
+  position: relative;
+  border: 2px solid #E5E7EB;
+}
+
+/* 페이지 중앙 접힘 선 */
+.page-fold {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #E5E7EB 0px,
+    #E5E7EB 4px,
+    transparent 4px,
+    transparent 8px
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* 파스텔 링 (6공) */
+.metal-ring {
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #E2D5F8 0%, #F0EBF8 50%, #D4C4E0 100%);
+  border: 3px solid #C5B9D6;
+  box-shadow: 
+    2px 2px 0px rgba(0,0,0,0.1),
+    inset 1px 1px 0px rgba(255,255,255,0.5);
+  position: relative;
+}
+
+/* 스크롤바 파스텔 스타일 */
+::-webkit-scrollbar {
+  width: 12px;
+  background: #F3E8FF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFB7C5;
+  border: 2px solid #F3E8FF;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFDAC1;
+}
