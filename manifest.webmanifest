@@ -1,0 +1,1 @@
+{"name":"소다팝 (Soda-Pop)","short_name":"소다팝","description":"나만의 감성 사진 다이어리 & 아카이브","start_url":"/soda-pop-diary/","display":"standalone","background_color":"#FFF0F5","theme_color":"#FFB7C5","lang":"ko","scope":"/soda-pop-diary/","orientation":"portrait","icons":[{"src":"/favicon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}],"categories":["lifestyle","photo"]}
