@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
+  base: '/soda-pop-diary/',
   plugins: [
     react(),
     tailwindcss(),
@@ -17,8 +18,8 @@ export default defineConfig({
         theme_color: '#FFB7C5',
         background_color: '#FFF0F5',
         display: 'standalone',
-        scope: '/',
-        start_url: '/',
+        scope: '/soda-pop-diary/',
+        start_url: '/soda-pop-diary/',
         orientation: 'portrait',
         icons: [
           {
